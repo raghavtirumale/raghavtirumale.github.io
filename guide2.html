@@ -1,0 +1,69 @@
+<link rel="stylesheet"  type="text/css" href="style.css">
+<script defer type="text/javascript" src="app.js"></script>
+
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="bio.html">Intro</a>
+    <a href="about.html">Experience</a>
+    <a href="guides.html">Guides</a>
+    <!-- <a href="index.html"><img class="icon" src="me.jpeg" alt="oops missing image!"></a> -->
+</div>
+
+
+<div style="margin-top: 10vw; margin-left: 15vw; margin-right: 15vw;">
+    <h1 class="largetitle">Using TaskWarrior for Terminal Commands</h1>
+    <h2 class="mediumtitle">01-10-2023</h2>
+    <p>
+        If you spend a lot of time in terminal, maybe you would like to have your to-do list in terminal as well. 
+        Or maybe you just want a lightweight, minimal tool that you can use to keep track of your tasks. 
+        In this guide we will explore how to do just that using TaskWarrior a neat package you can install with brew. 
+    </p>
+    <p style="padding:0.2vw"></p>
+    <h2 class="mediumtitle">Step 1: Install Brew</h2>
+    <p>
+        If you don't have brew installed, you can install it by running the following command in terminal. If you are on another OS (Windows/Linux) you can look at this link for installation: <link>https://docs.brew.sh/Homebrew-on-Linux</link>
+    </p>
+    <div class="codebox">
+    <code>
+        export HOMEBREW_INSTALL_FROM_API=1
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    </code>
+    </div>
+    <p style="padding:0.2vw"></p>
+    <h2 class="mediumtitle">Step 2: Install TaskWarrior</h2>
+    <p>
+        Now that you have brew installed, you can install TaskWarrior by running the following command in terminal.
+    </p>
+    <div class="codebox">
+    <code>
+        brew install task
+    </code>
+    </div>
+    <p style="padding:0.2vw"></p>
+    <h2 class="mediumtitle">Step 3: Useful commands</h2>
+    <p>
+        Now that you have TaskWarrior installed, you can start using it. Here are some useful commands to get you started.
+    </p>
+    <div class="codebox">
+    <code>
+        task add "task name" due:YYYY-MM-D //adds a task with a due date
+        task list //lists all tasks with their due dates
+        task "id" done //marks a task with a certain id (which is shown with task list) as done
+        task help //a comprehensive list of commands
+    </code>
+    </div>
+    <p style="padding:0.2vw"></p>
+    <p>
+        That's all I have for now. I hope this guide was useful to you. I'll be posting other interesting brew package related tutorials soon.
+    </p>
+    <p style="padding:0.5vw"></p>
+    <h2 class="mediumtitle">Thanks for Reading!</h2>
+    <p style="padding:8vw"></p>
+    </div>
+    <p style="padding:8vw"></p>
+</div>
+
+<div class="bottombar">
+    <a href="contact.html">Contact</a>
+</div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Three.JS Experiments</title>
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+        <link rel="stylesheet"  type="text/css" href="style.css">
+        <script defer type="text/javascript" src="app.js"></script>
+		<script src="three.js"></script>
+        <div id="pagebox">
+		<script>
+            //setting the scene
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+            const renderer = new THREE.WebGLRenderer();
+            renderer.setSize( window.innerWidth/2, window.innerHeight/2);
+            document.body.appendChild( renderer.domElement );
+
+            //cube
+            const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+            const material = new THREE.MeshBasicMaterial( { color: 'rgb(121,219,252)' } );
+            const cube = new THREE.Mesh( geometry, material );
+            scene.add( cube );
+
+            camera.position.z = 5;
+
+            function animate() {
+                requestAnimationFrame( animate );
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+                renderer.render( scene, camera );
+            }
+            animate();
+
+
+
+		</script>
+        <h1>Three.JS Experiments</h1>
+        </div>
+	</body>
+</html>

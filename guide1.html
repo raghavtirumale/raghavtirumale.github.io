@@ -1,0 +1,99 @@
+<link rel="stylesheet"  type="text/css" href="style.css">
+<script defer type="text/javascript" src="app.js"></script>
+
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="bio.html">Intro</a>
+    <a href="about.html">Experience</a>
+    <a href="guides.html">Guides</a>
+    <!-- <a href="index.html"><img class="icon" src="me.jpeg" alt="oops missing image!"></a> -->
+</div>
+
+
+<div style="margin-top: 10vw; margin-left: 15vw; margin-right: 15vw;">
+    <h1 class="largetitle">Custom Terminal Commands With Bash</h1>
+    <h2 class="mediumtitle">01-09-2023</h2>
+
+    <p>
+        This guide will show you how to create custom terminal commands with bash. This is very useful to have as it allows you to create shortcuts for commands you use often. Here we will look at how to run a python file using a custom command. Let's get into it!
+    </p>
+    <p style="padding:0.2vw"></p>
+    <h2 class="mediumtitle">Step 1: Create a bash script</h2>
+    <p>
+        First, we need to create a bash script. This is a file that will contain any commands we want. We will call our script commands.sh and place it in the root directory for easy access. Either open a code editor or use touch/nano/vim. Here we will use vim.
+    </p>
+    <div class="codebox">
+    <code>
+    cd //go to root directory
+    vim commands.sh //create commands.sh
+    </code>
+    </div>
+    <p>
+        Here is what to put in the file:
+    </p>
+    <div class="codebox">
+    <code>
+    #!/bin/bash
+    #!/usr/bin/python3
+
+    function plant() {
+        python3 [path to file]/[file].py
+    }
+    </code>
+    </div>
+    <p>
+        The first line tells the computer to treat this as a bash file. The second line tells the computer where python3 is installed and allows us to call python3. The third line creates a custom function called plant. The fourth line runs the python file [filename].py. You may have to change these directories on another operating system/installation.
+    </p>
+    <p style="padding:0.2vw"></p>
+    <h2 class="mediumtitle">Step 2: Make the commands work</h2>
+    <p>
+        Now we need to add our script as a source to our boot file to make these commands accessible. To check which shell you have running type:
+    </p>
+    <div class="codebox">
+    <code>
+        echo $0 // macOS
+        echo $SHELL // Linux
+    </code>
+    </div>
+    <p>
+        Now open .zshrc or .bashrc depending on your shell. Here we will use vim.
+    </p>
+    <div class="codebox">
+    <code>
+        vim .zshrc
+        //vim .bashrc
+    </code>
+    </div>
+    <p>
+        Add the following line to the bottom of the file:
+    </p>
+    <div class="codebox">
+    <code>
+        source [path to file]/commands.sh
+    </code>
+    </div>
+    <p style="padding:0.2vw"></p>
+    <h2 class="mediumtitle">Step 3: Run the commands</h2>
+    <p>
+        We are not done just yet. First restart your terminal to make sure the commands.sh is loaded. Then try out our custom command by typing: "plant". Here's what it looks like for me.
+    </p>
+    <div class="codebox">
+    <code>
+        ~ via C v11.0.3-clang via ☕ v14.0.1 [Mon Jan 09 202311:39PM]
+        ❯ plant
+        I'm a plant
+    </code>
+    </div>
+    <p>
+        My python file has a simple print statement that writes "I'm a plant". You can do anything you want with this. You can also add more commands to the commands.sh file.
+    </p>
+    <p style="padding:0.5vw"></p>
+
+    <h2 class="mediumtitle">Thanks for Reading!</h2>
+    <p style="padding:8vw"></p>
+</div>
+
+<div class="bottombar">
+    <a href="contact.html">Contact</a>
+</div>
