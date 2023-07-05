@@ -12,15 +12,17 @@
   height:100%;
 }
 
-@keyframes example {
+/* @keyframes example {
   0%   {text-shadow: 0 0 2px #79dbfc;}
   100% {text-shadow: 0 0 10px #79dbfc;}
 
-}
+} */
 .specialtitle{
-  animation-name: example;
+  /* transition: transform 0.5s; /* Animation */
+  /* animation-name: example;
   animation-duration: 20s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
+  font-size: 50px;
 
 
 }
@@ -186,6 +188,7 @@ ul{
   padding: 0 0 0 0;
 }
 
+
 .icon{
   position: relative;
   bottom:0.1vw;
@@ -199,16 +202,12 @@ ul{
   justify-content: center;
   font-family: "InterM", Helvetica, Arial, sans-serif;
   color: #79dbfc;
-  margin-top: 5vw;
-  margin-bottom: 5vw;
   font-size: 1.4vw;
   text-align: center;
   vertical-align: middle;
   float: center;
   padding-top: 15vw;
   padding-bottom: 15vw;
-  margin-left: 2.5vw;
-  margin-right: 2.5vw;
 }
 
 .compressor{
@@ -326,6 +325,14 @@ ul{
   border-radius: 15px 50px 30px;
 }
 
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 
 
 
